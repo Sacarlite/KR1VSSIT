@@ -32,7 +32,6 @@
             label2 = new Label();
             label3 = new Label();
             SelectFile_button = new Button();
-            button3 = new Button();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -41,9 +40,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 22);
             label1.Name = "label1";
-            label1.Size = new Size(193, 20);
+            label1.Size = new Size(284, 20);
             label1.TabIndex = 0;
-            label1.Text = "Лабораторная работа №1";
+            label1.Text = "Лабораторная работа №1 Вариант №2";
             // 
             // label2
             // 
@@ -73,15 +72,6 @@
             SelectFile_button.UseVisualStyleBackColor = true;
             SelectFile_button.Click += SelectFile_button_Click;
             // 
-            // button3
-            // 
-            button3.Location = new Point(220, 18);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 5;
-            button3.Text = "Задание";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             button1.Location = new Point(192, 126);
@@ -98,7 +88,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(326, 229);
             Controls.Add(button1);
-            Controls.Add(button3);
             Controls.Add(SelectFile_button);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -115,7 +104,6 @@
         private Label label2;
         private Label label3;
         private Button SelectFile_button;
-        private Button button3;
         private Button button1;
     }
 }

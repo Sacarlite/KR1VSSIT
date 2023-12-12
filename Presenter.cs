@@ -78,18 +78,34 @@ namespace KR1VSSIT
                 MessageBox.Show(exeption.Message);
                 return;
             }
-
-            if (fileManager.GetHexviev(HorizontalCS) == comparisonTuple.Item1 &&
-                fileManager.GetHexviev(VerticalCS) == comparisonTuple.Item2 &&
-                fileManager.GetHexviev(CyclicCS) == comparisonTuple.Item3)
+            
+            
+            StringBuilder message = new StringBuilder();
+            if (fileManager.GetHexviev(HorizontalCS) == comparisonTuple.Item1 )
             {
-                MessageBox.Show("Контрольные суммы совпадают");
+                message.Append("Контрольные суммы, вычисленные методом горизонтального контроля совпадают\n");
             }
             else
             {
-                MessageBox.Show("Контрольные суммы не совпадают");
+                message.Append("Контрольные суммы, вычисленные методом горизонтального контроля не совпадают\n");
             }
-
+            if (fileManager.GetHexviev(VerticalCS) == comparisonTuple.Item2)
+            {
+                message.Append("Контрольные суммы, вычисленные методом вертикального контроля совпадают\n");
+            }
+            else
+            {
+                message.Append("Контрольные суммы, вычисленные методом вертикального контроля не совпадают\n");
+            }
+            if (fileManager.GetHexviev(CyclicCS) == comparisonTuple.Item3)
+            {
+                message.Append("Контрольные суммы, вычисленные методом циклического контроля совпадают\n");
+            }
+            else
+            {
+                message.Append("Контрольные суммы, вычисленные методом циклического контроля не совпадают\n");
+            }
+            messageService.ShowMessage(message.ToString());
         }
         private void Mainform_GetControlSum(object? sender, GetCSEventArgs e)
         {

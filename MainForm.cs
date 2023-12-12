@@ -25,7 +25,7 @@ namespace KR1VSSIT
             }
             else
             {
-            return;
+                return;
             }
             if (GetControlSum != null)
                 GetControlSum.Invoke(this, new GetCSEventArgs(FilePath));
